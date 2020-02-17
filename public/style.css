@@ -1,0 +1,28 @@
+.footer{
+    background-color: #5edfff;
+    text-align: center;
+    height:100px;
+    padding: 0%;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.paragraphFooter{
+    margin: 38px auto 38px auto;
+    font-family:Oswald;
+    font-weight: regular;
+}
+.header{
+    background-color: #ecfcff;
+    font-family:Oswald;
+    font-weight: light;
+}
+.button{
+    background-color:#5edfff ;
+    border: #5edfff;
+}
+.newObject{
+    width: 60%;
+    margin: 50px;
+}
