@@ -1,22 +1,40 @@
 .footer{
-    background-color: #5edfff;
+    background-color: #1e1f1e;
     text-align: center;
-    height:100px;
-    padding: 0%;
-    margin-top: auto;
-    position: absolute;
-    bottom: 0;
+    height:170px;
     width: 100%;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
 }
 .paragraphFooter{
     margin: 38px auto 38px auto;
     font-family:Oswald;
     font-weight: regular;
+    color: white;
 }
 .header{
-    background-color: #ecfcff;
+    background-color: #eeeef5;
     font-family:Oswald;
     font-weight: light;
+    height: 100px;
+    padding:0px;
+    position: fixed;
+    top:0px;
+    width: 100%;
+   z-index: 1;
+}
+.navbarList{
+    margin-right: 10%;
+}
+.navbarItem{
+   margin:20px;
+}
+.navbarAmazingTravel{
+    margin-left: 10%;
 }
 .button{
     background-color:#5edfff ;
@@ -25,4 +43,197 @@
 .newObject{
     width: 60%;
     margin: 50px;
+}
+.posts{
+    padding:10%;
+    position: relative;
+    text-align: center;
+    
+}
+.parallax{
+    background: url(https://ciekawe.org/wp-content/uploads/2018/07/dragon-trees-socotra-yemen-728x546.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    height:700px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin-top: 100px;
+    background-position:top;
+    
+}
+.parallax::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.432);
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+.parallax1{
+text-align: center;
+padding-top: 300px;
+}
+.parallax1Heading{
+    text-shadow: 3px 3px #323331;
+    font-size: 3.5rem;
+    color: #fff;
+}
+.parallaxButton{
+    background-color: #7bb431;
+    border-radius: 15px;
+    border-color: #7bb431;
+    margin: 50px;
+    padding: 15px;
+    font-weight: bold;
+}
+.parallaxButton:hover{
+    background-color: #fff;
+    border-color: #fff;
+    color:#7bb431;
+}
+.aboutLeft{
+    padding:10% 0%;
+    color:black;
+    width: 60%;
+    float: left;
+  
+}
+.aboutRight{
+    padding:10% 0%;
+    width: 40%;
+    float: right;
+   
+}
+.bacgroundDiv{
+
+    background-color: #eeeef5;
+}
+.homeIcon{
+    margin:20px;
+    color: #7bb431;
+}
+.homeIcon:hover{
+    color: #3a5f0a;
+}
+.iconsConteiner{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.headingIcon{
+    color:black;
+    margin-top: 20px;
+}
+.postItem{
+    margin-top: 50px;;
+}
+.parallax2{
+    background: url(https://purewows3.imgix.net/images/articles/2019_04/most-beautiful-places-in-the-world-chile.png?auto=format,compress&cs=strip) no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column nowrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -webkit-box-align: start;
+
+}
+.parallax2::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.356);
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+.parallax2Heading{
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+    text-shadow: 3px 3px #323331;
+    font-size: 3.5rem;
+}
+.carousel-item{
+    height: 500px;
+    margin-top: 100px;
+}
+.slideButton{
+    margin-top: 100px;
+}
+.bacgroundPost{
+    background-color: #eeeef5;
+}
+.sheetContainer{
+    text-align: center;
+    margin-top:200px ;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+.imagePostDetails{
+    width: 70%;
+    height: auto;
+    border-style:groove ;
+    border-width:5px;
+    margin-bottom: 5%;
+}
+.contactIcon{
+    margin:8%;
+    color: rgb(131, 134, 132);
+}
+.contactIcon:hover{
+    color: #7bb431;
+}
+.sheetTitle{
+    margin-bottom: 3%;
+    color: #7bb431;
+    font-weight: bold;
+}
+.homeHeading{
+    color: #7bb431;
+    text-shadow: 3px 3px #323331;
+    font-size: 4rem;
+}
+.followInstagramBackground{
+    background-color: #1e1f1e;
+    height: 300px;
+    color:#fff;
+    text-align: center;
+    padding: 8%;
+    box-sizing: content-box;
+
+}
+.foloowInstaRight{
+    /* width: 50%; */
+    float: right;
+} 
+.followInstagramLeft{
+    /* width: 35%; */
+    float:left;
+}
+.instaIcon{
+    padding:4px;
+}
+.followInstaButton{
+    margin:10%;
+    font-weight: bold;
+}
+.hollowInstaHeading{
+    text-shadow: #aa0808 3px 3px;
+    font-size: 2.5rem;
+}
+.amazingTravel{
+    background-color: #1e1f1e;
 }

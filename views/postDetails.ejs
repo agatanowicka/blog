@@ -1,0 +1,8 @@
+<%- include('layout/header.ejs'); -%>
+<div class="conteiner sheetConteiner">
+    <% if (postImage)  { %> <img class="imagePostDetails"  src="<%= postImage %>"> <% } %>
+    <h1 class="sheetTitle"><%= postTitle %></h1>
+    <p><%= postText %></p>
+</div>
+
+<%- include('layout/footer.ejs'); -%>
