@@ -237,3 +237,20 @@ padding-top: 300px;
 .amazingTravel{
     background-color: #1e1f1e;
 }
+.formLogin{
+    float: right;
+    
+    width: 50%;
+    
+}
+.loginWith{
+    float: left;
+    
+}
+.formInput{
+    width: 100%;
+}
+.formSignUp{
+    width: 80%;
+   margin: auto;
+}

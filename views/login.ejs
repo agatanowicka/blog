@@ -1,0 +1,31 @@
+<%- include('layout/header.ejs'); -%>
+<div class="sheetContainer">
+    <form class="row formLogin">
+        <div class=" col-sm-12 ">
+            <div class="form-group formInput">
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+            </div>
+            <div class="form-group formInput">
+                <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+            </div>
+           <button type="submit" class="btn btn-primary">Log In</button>
+           <a href="/signUp" role="button"  class="btn btn-primary">Sign Up</a>
+        </div>
+    </form>
+    <div clss="col-sm-12 ">
+        <div class="card loginWith">
+            <div class="card-body">
+                <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+                    <i class="fab fa-google"></i> Sign in with Google
+                </a>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook" role="button">
+                    <i class="fab fa-facebook"></i> Sign in with Facebook
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('layout/footer.ejs'); -%>
