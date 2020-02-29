@@ -32,7 +32,7 @@
             <div class="card-body">
                 <h5 class="card-title sheetTitle"><%= allPosts[i].title %></h5>
                 <p class="card-text"><%= (allPosts[i].text.substring(0, 300 )+ " ...") %></p>
-                <a href="/postDetails/<%= allPosts[i].title %>" class="btn btn-success btn-lg parallaxButton">Read
+                <a href="/postDetails/<%= allPosts[i]._id  %>" class="btn btn-success btn-lg parallaxButton">Read
                     more</a>
             </div>
         </div>

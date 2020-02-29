@@ -1,8 +1,16 @@
 <%- include('layout/header.ejs'); -%>
 <div class="sheetContainer">
-    <% if (postImage)  { %> <img class="imagePostDetails"  src="<%= postImage %>"> <% } %>
+    <% if (postImage)  { %> <img class="imagePostDetails" src="<%= postImage %>"> <% } %>
     <h1 class="sheetTitle"><%= postTitle %></h1>
     <p><%= postText %></p>
+    <%  if (isOwner){ %>
+    <form action="/postDelete/<%= postId %>" method="POST">
+        <button type="submit" name="delete" class="btn btn-primary button">Delete</button>
+    </form>
+    <form action="/postEdit/<%= postId %>" method="POST">
+        <button type="submit" name="edit" class="btn btn-primary button">Edit</button>
+    </form>
+    <% } %>
 </div>
 
 <%- include('layout/footer.ejs'); -%>

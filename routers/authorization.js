@@ -4,10 +4,10 @@ const passport = require("passport");
 
 router.route("/signUp")
 .get( function (req, res) {
-    res.render("signUp",{loginUser: req.isAuthenticated()});
+    res.render("signUp");
 })
 .post( function (req, res) {
-    const passportUser = new User({ firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, username: req.body.email })
+    const passportUser = new User({ firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, username: req.body.email, idPosts: req.post._id })
     User.register(passportUser, req.body.password, function (err, user) {
         if (err) {
             res.redirect('/signUp');
@@ -22,7 +22,7 @@ router.route("/signUp")
 
 router.route("/login")
 .get( function (req, res) {
-    res.render('login', {loginUser: req.isAuthenticated()});
+    res.render('login');
 })
 .post( passport.authenticate('local', { failureRedirect: '/login' }), function (req, res) {
     res.redirect('/');
