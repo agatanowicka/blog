@@ -11,7 +11,9 @@ const userSchema = new Schema({
     password: String,
     googleId: String,
     facebookId: String,
-    idPosts:[{type:Schema.Types.ObjectId, ref:"post"}]
+    idPosts:[{type:Schema.Types.ObjectId, ref:"post"}],
+    idProfile:{type:Schema.Types.ObjectId, ref:"profile"}
+
 });
  
 userSchema.plugin(passportLocalMongoose);

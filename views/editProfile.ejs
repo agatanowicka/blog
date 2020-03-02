@@ -1,0 +1,30 @@
+<%- include('layout/header.ejs'); -%>
+<form action="/editProfile" method="POST" autocomplete="off" class="profileForm">
+    <div class="form-group">
+        <label>About me</label>
+        <textarea class="form-control" rows="4" cols="50" name="userInfo"><%= editProfile.infoAboutUser %></textarea>
+    </div>
+    <div class="form-group">
+        <label>Image</label>
+        <textarea class="form-control" rows="4" cols="50" name="userImage"><%= editProfile.imageUser %></textarea>
+    </div>
+    <div class="form-group">
+        <label>Facebook</label>
+        <input class="form-control" name="userFacebook" value="<%= editProfile.facebookUser %>">
+    </div>
+    <div class="form-group">
+        <label>Instagram</label>
+        <input class="form-control" name="userInstagram" value="<%= editProfile.instagramUser %>">
+    </div>
+    <div class="form-group">
+        <label>youtube</label>
+        <input class="form-control" name="userYoutube" value="<%= editProfile.youtubeUser %>">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" name="userEmail" value="<%= editProfile.emailUser %>">
+    </div>
+    <button type="submit" class="btn btn-primary button">Add</button>
+</form>
+
+<%- include('layout/footer.ejs'); -%>

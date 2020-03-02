@@ -23,9 +23,23 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h2>Hi to all. I am Agata. I hope that thanks to this blog I will infect you with my passion for traveling. 
+            So you'll find: </h2>
+            <div class= "conteiner iconsConteiner">
+            <i class="far fa-lightbulb fa-3x homeIcon"><h3 class="headingIcon">travel ideas</h3></i>
+            <i class="far fa-comment-dots fa-3x homeIcon"><h3  class="headingIcon">expedition reports</h3></i>
+            <i class="fas fa-utensils fa-3x homeIcon"><h3 class="headingIcon">where to eat</h3></i>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img src="https://png.clipart.me/istock/previews/6383/63830497-traveler-and-elements-for-hike-and-camp.jpg">
+      </div>
+    </div>
+
 <div class="conteiner bacgroundPost">
     <div class="conteiner posts">
-        <h1 class="homeHeading">MY AMAZING TRAVEL</h1>
         <% for(var i = 0; i < allPosts.length; i++){ %>
         <div class="card postItem">
             <img src="<%= allPosts[i].image %>" class="card-img-top">
@@ -39,4 +53,11 @@
         <% }; %>
     </div>
 </div>
+<div class="sheetContainer">
+    <h1 class="sheetTitle">Contact</h1>
+     <a href="https://pl-pl.facebook.com/"><i class="fab fa-facebook fa-4x contactIcon"></i></a>
+     <a href="https://www.instagram.com/?hl=pl"><i class="fab fa-instagram fa-4x contactIcon"></i></a>
+     <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="fas fa-envelope-open-text fa-4x contactIcon"></i></a>
+     <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-4x contactIcon"></i></a>
+  </div>
 <%- include('layout/footer.ejs'); -%>

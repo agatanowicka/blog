@@ -7,11 +7,15 @@ const passport = require("passport");
 const LocalStrategy = require('passport-local').Strategy;
 require('dotenv').config();
 
+
 const User = require('./models/user');
 const autorization = require("./routers/authorization");
 const blogPages = require("./routers/blogPages");
+const userProfile = require("./routers/addAndEditProfile")
 const googleAuthorization = require("./routers/googleAuthorization");
+const deleteAndEditPost= require("./routers/deleteAndEditPost");
 const myEjsMiddleware = require("./middleware/myEjs");
+const myUserMiddleware = require("./middleware/myUser");
 User.createStrategy();
 
 passport.use(new LocalStrategy(User.authenticate()));
@@ -31,9 +35,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(myEjsMiddleware);
+app.use(myUserMiddleware);
 app.use(blogPages);
 app.use(autorization);
 app.use(googleAuthorization);
+app.use(deleteAndEditPost);
+app.use(userProfile);
 
 mongoose.connect("mongodb://localhost:27017/blogDB", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
