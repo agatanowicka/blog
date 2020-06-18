@@ -1,20 +1,56 @@
 <%- include('layout/header.ejs'); -%>
-<div class=homePage>
-<div class="parallaxHome">
-    <h1 class="parallax3Heading"> Us travellers </h1>
-</div>
-<div class="row allUsers">
-    <% for( let i=0; i< allUsers.length; i++){ %>
-    <div class="col-sm-6">
-        <div class="card userCard">
-            <div class="card-body " >
-                <h5 class="card-title homeCardTitle"><%=allUsers[i].firstName %> <%= allUsers[i].lastName %></h5>
-                <a href="/home/<%=allUsers[i]._id %>" class="btn btn-success btn-lg">View profile</a>
+<div class="allPage">
+    <div class="parallaxHome"></div>
+    <div class="row allUsers">
+        <% for( let i=0; i< allUsers.length; i++){ %>
+        <div class="col-sm-12  col-lg-6 ">
+            <div class="card userCard">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h5>Profile</h5>
+                    </div>
+                    <div class="card-block">
+                        <div class="user-image">
+                            <img src="<%= allUsers[i].image %>" class="img-radius" alt="User-Profile-Image">
+                        </div>
+                        <h6 class="f-w-600 m-t-25 m-b-10"><%=allUsers[i].firstName %> <%= allUsers[i].lastName %></h6>
+                        <hr>
+
+                        <div class="bg-c-blue counter-block m-t-10 p-20">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-comment"></i>
+                                    <p>posts </p>
+                                    <p><%= allUsers[i].idPosts.length %></p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-globe-americas"></i>
+                                    <p>countries </p>
+                                    <p><%= allUsers[i].numberOfCountries | 0 %></p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fa fa-suitcase"></i>
+                                    <p>travels</p>
+                                    <p><%= allUsers[i].numberOfTrips | 0 %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-t-15 text-muted textUserCard"><%=(allUsers[i].info.substring(0, 100 )+ " ...")%></p>
+                        <hr>
+                        <a href="/home/<%=allUsers[i]._id %>" class="btn btn-outline-dark btn-lg cardButton">View
+                            profile</a>
+                        <hr>
+                        <div class="row justify-content-center user-social-link cardUserIcon">
+                            <% if (allUsers[i].facebook) { %> <div class="col-auto"><a href="<%= allUsers[i].facebook %>"><i class="fab fa-facebook"></i></a></div> <% } %>
+                            <% if (allUsers[i].instagram) { %> <div class="col-auto"><a href="<%= allUsers[i].instagram %>"><i class="fab fa-instagram"></i></a></div> <% } %>
+                            <% if (allUsers[i].twitter) { %> <div class="col-auto"><a href="<%= allUsers[i].twitter %>"><i class="fab fa-twitter"></i></a></div> <% } %>
+                            <% if (allUsers[i].youtube) { %> <div class="col-auto"><a href="<%= allUsers[i].youtube %>"><i class="fab fa-youtube"></i></a></div> <% } %>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <% }; %>
     </div>
-    <% }; %>
-</div>
 </div>
 <%- include('layout/footer.ejs'); -%>
-

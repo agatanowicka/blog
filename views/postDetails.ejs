@@ -1,14 +1,11 @@
 <%- include('layout/header.ejs'); -%>
-<div class="sheetContainer">
+<div class="postPage allPage">
     <% if (postImage)  { %> <img class="imagePostDetails" src="<%= postImage %>"> <% } %>
     <h1 class="sheetTitle"><%= postTitle %></h1>
     <p><%= postText %></p>
     <%  if (isOwner){ %>
-    
       <a href="/postDelete/<%= postId %>" > <button  name="delete" class="btn btn-primary button">Delete</button></a>
        <a href="/postEdit/<%= postId %>" ><button type="submit" name="edit" class="btn btn-primary button">Edit</button></a>
-    
     <% } %>
 </div>
-
 <%- include('layout/footer.ejs'); -%>

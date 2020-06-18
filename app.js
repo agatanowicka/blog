@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require('passport-local').Strategy;
+const fs = require('fs');
 require('dotenv').config();
 
 
@@ -31,7 +32,6 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(myEjsMiddleware);
@@ -42,18 +42,20 @@ app.use(googleAuthorization);
 app.use(deleteAndEditPost);
 app.use(userProfile);
 
-mongoose.connect("mongodb://localhost:27017/blogDB", { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('mongoose conected');
-    })
-    .catch((err) => {
-        console.log(`mongoose connection error ${err}`);
-    });
 mongoose.set("useCreateIndex", true);
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.listen(3000, () => {
-    console.log(`Server started on port 3000`);
-})
+mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('mongoose conected');
+        app.listen(3000, () => {
+            console.log(`Server started on port 3000`);
+        })
+    })
+    .catch((err) => {
+        console.log(`mongoose connection error ${err}`);
+    });
+
+

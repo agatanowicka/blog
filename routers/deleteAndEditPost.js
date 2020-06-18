@@ -42,7 +42,6 @@ router.get("/postEdit/:postId", function (req, res) {
             }
         })
         .then(function (post) {
-            console.log(post);
             res.render("postForm", {
                 editPost: {
                     title: post.title,
@@ -53,7 +52,6 @@ router.get("/postEdit/:postId", function (req, res) {
             });
         })
         .catch(function (err) {
-            console.log(err);
             res.redirect('/errorpage.html');
         })
 })

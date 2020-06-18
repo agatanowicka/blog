@@ -1,5 +1,6 @@
 <%- include('layout/header.ejs'); -%>
-<form action="/editProfile" method="POST" autocomplete="off" class="profileForm">
+<div class="allPage">
+<form action="/editProfile" method="POST" autocomplete="off" class="form">
     <div class="form-group">
         <label>About me</label>
         <textarea class="form-control" rows="4" cols="50" name="userInfo"><%= editProfile.infoAboutUser %></textarea>
@@ -21,10 +22,18 @@
         <input class="form-control" name="userYoutube" value="<%= editProfile.youtubeUser %>">
     </div>
     <div class="form-group">
-        <label>Email</label>
-        <input class="form-control" name="userEmail" value="<%= editProfile.emailUser %>">
+        <label>twitter</label>
+        <input class="form-control" name="userTwitter" value="<%= editProfile.twitterUser %>">
+    </div>
+    <div class="form-group">
+        <label>Number of countries visited</label>
+        <input class="form-control" name="visitedCountries" value="<%= editProfile.visitedCountries %>">
+    </div>
+    <div class="form-group">
+        <label>Number of trips</label>
+        <input class="form-control" name="numberOfTrips" value="<%= editProfile.numberOfTrips %>">
     </div>
     <button type="submit" class="btn btn-primary button">Add</button>
 </form>
-
+</div>
 <%- include('layout/footer.ejs'); -%>

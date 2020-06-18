@@ -1,0 +1,23 @@
+[
+    {
+        "_id": "5eeb7d6d4edad901a4f4ad7b",
+        "title": "Brazil",
+        "text": "Brazil  officially the Federative Republic of Brazil is the largest country in both South America and Latin America. At 8.5 million square kilometers (3.2 million square miles) and with over 211 million people, Brazil is the world's fifth-largest country by area and the sixth most populous. Its capital is Brasília, and its most populous city is São Paulo. The federation is composed of the union of the 26 states and the Federal District. It is the largest country to have Portuguese as an official language and the only one in the Americas; it is also one of the most multicultural and ethnically diverse nations, due to over a century of mass immigration from around the world.",
+        "image": "https://cdn.pixabay.com/photo/2017/01/08/19/30/rio-de-janeiro-1963744__340.jpg",
+        "autor": "5eeb7c3582df1e13e0fa0a65"
+    },
+    {
+        "_id": "5eeb7dc44edad901a4f4ad7c",
+        "title": "Venice",
+        "text": "Venice is a city in northeastern Italy and the capital of the Veneto region. It is situated on a group of 118 small islands that are separated by canals and linked by over 400 bridges. The islands are located in the shallow Venetian Lagoon, an enclosed bay that lies between the mouths of the Po and the Piave rivers (more exactly between the Brenta and the Sile). In 2018, 260,897 people resided in the Comune di Venezia, of whom around 55,000 live in the historical city of Venice (centro storico). Together with Padua and Treviso, the city is included in the Padua-Treviso-Venice Metropolitan Area (PATREVE), which is considered a statistical metropolitan area, with a total population of 2.6 million.",
+        "image": "https://cdn.pixabay.com/photo/2016/02/19/11/36/canal-1209808__340.jpg",
+        "autor": "5eeb7c3582df1e13e0fa0a65"
+    },
+    {
+        "_id": "5eeb7fff1ded0e158011c8d7",
+        "title": "Dominican Republic",
+        "text": "The Dominican Republic is a country located on the island of Hispaniola in the Greater Antilles archipelago of the Caribbean region. It occupies the eastern five-eighths of the island, which it shares with Haiti, making Hispaniola one of only two Caribbean islands, along with Saint Martin, that are shared by two sovereign states. The Dominican Republic is the second-largest nation in the Antilles by area (after Cuba) at 48,671 square kilometers (18,792 sq mi), and third by population with approximately 10.5 million people (2020 est.), of whom approximately 3.3 million live in the metropolitan area of Santo Domingo, the capital city.The official language of the country is Spanish.",
+        "image": "https://cdn.pixabay.com/photo/2016/03/04/19/36/beach-1236581__340.jpg",
+        "autor": "5eeb7c3582df1e13e0fa0a66"
+    }
+]

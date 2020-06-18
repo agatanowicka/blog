@@ -12,19 +12,19 @@ passport.use(new GoogleStrategy({
 },
     function (accessToken, refreshToken, profile, done) {
         User.findOrCreate({ googleId: profile.id }, function (err, user) {
-           return done(err, user);
+            return done(err, user);
         });
     }
 ));
-passport.serializeUser(function(user, done) {
+passport.serializeUser(function (user, done) {
     done(null, user);
-  });
-  
-  passport.deserializeUser(function(user, done) {
-    done(null, user);
-  }); 
+});
 
-router.get('/auth/google', passport.authenticate('google', { scope:  ['https://www.googleapis.com/auth/plus.login'] }));
+passport.deserializeUser(function (user, done) {
+    done(null, user);
+});
+
+router.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
 router.get("/auth/google/blog",
     passport.authenticate("google", { failureRedirect: "/login" }),

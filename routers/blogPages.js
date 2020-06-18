@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const postModel = require("../models/post")
+const postModel = require("../models/post");
 const User = require('../models/user');
 
 router.get("/", function (req, res) {
@@ -17,13 +17,12 @@ router.get("/home/:id", function (req, res) {
     User.findById(req.params.id)
         .populate('idPosts')
         .exec(function (err, user) {
-            console.log(user);
             if (err) {
                 return res.redirect('/errorpage.html');
             }
             else {
                 return res.render('userHome', {
-                    allPosts: user.idPosts
+                    allPosts: user.idPosts, user: user
                 });
             }
         })
@@ -96,14 +95,11 @@ router.route("/postForm")
                     })
             }
         });
-
     }
     );
 
 router.get((req, res) => {
     res.redirect('/errorpage.html');
 });
-
-
 
 module.exports = router;
